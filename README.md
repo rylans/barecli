@@ -1,0 +1,2 @@
+# barecli
+Barebones CLI template
