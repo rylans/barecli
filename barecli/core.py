@@ -25,6 +25,25 @@ def count(input_string):
     """
     return str(len(input_string))
 
+def wc(input_string):
+    """Return the number of words in input string
+
+    Examples
+    --------
+
+    >>> wc('hello there')
+    '2'
+
+    >>> wc('hello')
+    '1'
+
+    >>> wc('')
+    '0'
+    """
+    if input_string == '':
+        return str(0)
+    return str(len(input_string.split(' ')))
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
