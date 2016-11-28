@@ -25,21 +25,35 @@ def count(input_string):
     """
     return str(len(input_string))
 
-def wc(input_string):
+def wc(input_string, list_flag=False):
     """Return the number of words in input string
 
     Examples
     --------
 
-    >>> wc('hello there')
+    >>> wc('hello there', False)
     '2'
 
-    >>> wc('hello')
+    >>> wc('hello', False)
     '1'
 
-    >>> wc('')
+    >>> wc('', False)
     '0'
+
+    >>> wc('', True)
+    []
+
+    >>> wc('uno', True)
+    ['uno']
+
+    >>> wc('uno dos', True)
+    ['uno', 'dos']
     """
+    if list_flag:
+        if input_string == '':
+            return []
+        else:
+            return input_string.split(' ')
     if input_string == '':
         return str(0)
     return str(len(input_string.split(' ')))
