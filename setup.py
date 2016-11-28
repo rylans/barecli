@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
         name='barecli',
-        version='0.0.1',
+        version='0.0.5',
         description='barecli description',
         author='Author Name',
         author_email='author@email.xyz',
